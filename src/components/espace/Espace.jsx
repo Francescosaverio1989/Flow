@@ -3,8 +3,7 @@ import Commentaire from "./Commentaire";
 import "./Espace.css";
 
 const Espace = ({ parentId }) => {
-  const [name, setName] = useState("");
-  const [content, setContent] = useState("");
+  const [userStory, setUserStory] = useState([]);
 
   const handleCommentSubmission = async (e) => {
     e.preventDefault();
@@ -14,9 +13,10 @@ const Espace = ({ parentId }) => {
       pId: parentId || null,
       time: new Date(),
     };
-    setName("");
-    setContent("");
-    console.log(comment);
+    setUserStory([...userStory, comment])
+
+    console.log(userStory)
+
   };
 
   return (
@@ -48,6 +48,14 @@ const Espace = ({ parentId }) => {
           Post
         </button>
       </form>
+      <div>
+        {userStory.map((story, index) => (
+          <div>
+            <p>{story.name}</p>
+            <p>{story.content}</p>
+          </div>
+        ) )}
+      </div>
     </div>
   );
 };
