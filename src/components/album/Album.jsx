@@ -6,6 +6,15 @@ import { Singles } from "./Singles.jsx";
 
 export const Album = () => {
   const [album, setAlbum] = useState();
+  // const params = useParams();
+
+  // console.log("L'artiste en cours est :")
+  // console.log(params.artiste);
+  // const artistName = params.artiste;
+  // console.log("L'album en cours est :")
+  // console.log(params.album);
+  // const albumName = params.album;
+
   //   const { albumName, artistName } = useParams();
   const artistName = "Cher";
   const albumName = "Believe";
