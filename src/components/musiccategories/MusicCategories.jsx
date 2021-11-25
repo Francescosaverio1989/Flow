@@ -1,6 +1,5 @@
 import React from 'react'
 import './MusicCategories.css'
-import MusicCategory from '../musiccategory/MusicCategory'
 import icone from '../../assets/icones/icone-music.png'
 
 const MusicCategories = ({setChosenInspiration,
