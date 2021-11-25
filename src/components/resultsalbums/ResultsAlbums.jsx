@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useParams, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import "./ResultsAlbums.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Helmet } from 'react-helmet';
@@ -7,7 +8,13 @@ import { Helmet } from 'react-helmet';
 
 const ResultsAlbums = () => {
 
-  const { artistName, albumName } = useParams();
+  const params = useParams();
+
+  console.log("L'artiste en cours est :")
+  console.log(params.artiste);
+  console.log("L'album en cours est :")
+  console.log(params.album);
+
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -16,10 +23,11 @@ const ResultsAlbums = () => {
 
   const getAlbums = () => {
     axios
-      .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&artist=${artistName}&album=${albumName}&format=json`)
-      .then(response => console.log(response.data))
+      .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&artist=${params.artist}&album=${params.album}&format=json`)
+      .then(response => setResults(response.data.album))
   }
 
+  console.log(results)
 
   return (
     <main className="slider">
@@ -30,7 +38,7 @@ const ResultsAlbums = () => {
         </Helmet>
 
         <div className="albumName">
-          <h1>{albumName}</h1>
+          <h1>{params.album}</h1>
         </div>
         <Carousel
           autoPlay
