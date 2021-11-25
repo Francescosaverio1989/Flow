@@ -1,4 +1,6 @@
 .espace-cont {
+  display: flex;
+  flex-direction: column;
   background-color: #00c4cc;
   color: black;
 }

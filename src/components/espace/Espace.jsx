@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Commentaire from "./Commentaire";
 import "./Espace.css";
 
 const Espace = ({ parentId }) => {
@@ -19,7 +20,7 @@ const Espace = ({ parentId }) => {
   };
 
   return (
-    <div>
+    <div className="espace-cont">
       <form onSubmit={(e) => handleCommentSubmission(e)}>
         <label htmlFor="name">
           Name
