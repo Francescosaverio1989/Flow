@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import "./Espace.css";
 
 const Espace = ({ parentId }) => {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
+
+  useEffect(() => {
+    
+  }
+  )
 
   const handleCommentSubmission = async (e) => {
     e.preventDefault();
