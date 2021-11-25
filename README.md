@@ -15,6 +15,6 @@ Here are some examples :
 🎷 API music list
 
 Judging criteria : 
-    UX DESIGN
-    TECHNICAL ASPECTS
-    CONCEPT ORAL PRESENTATION
+    UX DESIGN / 
+    TECHNICAL ASPECTS / 
+    CONCEPT ORAL PRESENTATION / 
