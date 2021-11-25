@@ -1,10 +1,22 @@
-export const Singles = () => {
+import React, { Component } from "react";
 
-    //console.log(game);
+export const Singles = (props) => {
+
+  const { album } = props; 
+
+    console.log("singles");
+    console.log(album);
 
     return (
       <div>
-          Singles
+              {album.tracks.track.map(song => {
+                return(
+                  <>
+                  <div>{song.name}, {song.duration}</div>
+                  </>
+                )
+                
+              })}
       </div>
     );
   }
