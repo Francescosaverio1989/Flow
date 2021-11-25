@@ -13,9 +13,6 @@ const AlbumList = ({chosenInspiration}) => {
         .then(res => res.data.results.albummatches.album)
         .then(data => setAlbumList(data))
 
-    console.log("state de albumlist");
-    console.log(albumList);
-
     }, [chosenInspiration]);
 
     return (
