@@ -14,7 +14,7 @@ const AlbumList = ({chosenInspiration}) => {
         .then(data => setAlbumList(data))
 
     console.log("state de albumlist");
-    console.log(albumList[0]);
+    console.log(albumList);
 
     }, [chosenInspiration]);
 
