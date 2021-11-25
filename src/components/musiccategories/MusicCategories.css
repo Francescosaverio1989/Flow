@@ -1,0 +1,34 @@
+.music-categories-section {
+    background-color: #4c0bd1;
+    width: 22vw;
+    min-height: 500px;
+    padding: 3rem 2rem;
+}
+
+.music-categories-section h2 {
+    font-size: 1rem;
+    color: #00c4cc;
+}
+
+.music-category-container{
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.music-category-icone {
+    width: 1.7rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.music-category-container button{
+    background-color: transparent;
+    border: none;
+    color: #fffdff;
+    font-size: 1rem;
+}
+
+.music-category-container button{
+    cursor: pointer;
+}

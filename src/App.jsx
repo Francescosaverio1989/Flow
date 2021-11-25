@@ -1,17 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/home/Home";
+import Espace from "./components/espace/Espace";
 
-import { Album } from "./components/album/Album.jsx";
-import { Singles } from "./components/album/Singles.jsx";
-import { AudioPlayer } from "./components/album/AudioPlayer.jsx";
+import "./App.css";
 
-const App = (album) => {
+const App = () => {
   return (
-    <div className="App">
-      <Album />
-      <Singles />
-      <AudioPlayer />
-
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Espace" element={<Espace />} />
+        </Routes>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
