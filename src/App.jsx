@@ -1,8 +1,9 @@
+import Lyrics from "./lyrics/Lyrics";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-          
+          <Lyrics />
     </div>
   );
 }
