@@ -13,15 +13,15 @@
 
 .album-single-info h3 {
     color: #4c0bd1;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .album-single-info h4 {
     margin-bottom: 0.5rem;
     color: #00C4CC;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: normal;
 }
 .album-single-info p {
     color: #E43397;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
