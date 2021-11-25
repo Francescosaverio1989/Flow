@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './AlbumSingle.css'
 import icone from '../../assets/icones/icone-music.png'
 
@@ -9,7 +10,7 @@ const AlbumSingle = ({name, mbid, artist, image}) => {
             <div className="album-single-info">
                 <h3>{name}</h3>
                 <h4>{artist}</h4>
-                <p>2019</p>
+                <Link to={`/album/${artist}/${name}`}><p>Explore</p></Link>
             </div>
         </div>
     )

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const Header = ({ name }) => {
-    return (
-        <div>
-            <h1>Welcome to {name}</h1>  
-        </div>
-    )
-}
-
-export default Header;
-=======
 import React from 'react'
 import './Header.css'
 import logo from '../../assets/images/logo-flow.png'
@@ -25,4 +12,3 @@ const Header = () => {
 }
 
 export default Header
->>>>>>> main
