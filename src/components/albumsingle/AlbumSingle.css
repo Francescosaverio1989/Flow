@@ -1,0 +1,27 @@
+.album-single-countainer {
+    display: flex;
+    margin: 1rem 2rem;
+    width: 28vw;
+}
+
+.album-single-image {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(179, 176, 182);
+    margin-right: 1rem;
+}
+
+.album-single-info h3 {
+    color: #4c0bd1;
+    font-size: 1.1rem;
+}
+.album-single-info h4 {
+    margin-bottom: 0.5rem;
+    color: #00C4CC;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.album-single-info p {
+    color: #E43397;
+    font-size: 0.9rem;
+}

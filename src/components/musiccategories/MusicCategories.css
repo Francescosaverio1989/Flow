@@ -1,0 +1,11 @@
+.music-categories-section {
+    background-color: #4c0bd1;
+    width: 22vw;
+    min-height: 500px;
+    padding: 3rem 2rem;
+}
+
+.music-categories-section h2 {
+    font-size: 1rem;
+    color: #00c4cc;
+}
