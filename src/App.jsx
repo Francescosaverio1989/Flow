@@ -1,14 +1,24 @@
-import Header from './components/header/Header';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ResultsAlbums from './components/results-albums/ResultsAlbums.jsx';
 import "react-responsive-carousel/lib/styles/carousel.min.css";  // requires a loader 
+import Espace from "./components/espace/Espace";
 
-function App() {
+import "./App.css";
+
+const App = () => {
   return (
-    <div>
-      <Header name="FLOW" />
-      <ResultsAlbums />
-    </div>
+    
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Espace" element={<Espace />} />
+          <Route path="/Albums" element={<ResultsAlbums />} />
+        </Routes>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
