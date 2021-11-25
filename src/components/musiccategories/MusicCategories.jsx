@@ -5,7 +5,7 @@ import icone from '../../assets/icones/icone-music.png'
 const MusicCategories = ({setChosenInspiration,
     handleClick}) => {
 
-    const inspirations = ["Believe", "Happy", "Calm", "Joy", "Danse", "Cry"];
+    const inspirations = ["Believe", "Happy", "Calm", "Joy", "Danse", "Cry", "Love", "Relax"];
 
     return (
         <section className="music-categories-section">
