@@ -25,3 +25,8 @@
     color: #E43397;
     font-size: 0.8rem;
 }
+
+.clean-link:hover {
+ font-size: 1rem;
+ transition: font-size 0.5s ease-out;
+}

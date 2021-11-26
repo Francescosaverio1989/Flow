@@ -1,13 +1,37 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
+import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios';
 import './Album.css';
 import logo from '../../assets/images/logo-flow.png'
+import "./ResultsAlbums.css";
 
 export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setChosenArtist}) => {
 
   const [chosenAlbum, setChosenAlbum] = useState();
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    getAlbums()
+  }, []);
+
+  const getAlbums = () => {
+    axios
+      .get(`https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&format=json`)
+      .then(response => {
+        console.log(response.data.topalbums.album)
+        setResults(response.data.topalbums.album)
+      })
+  }
+
+  const filteredResults = [];
+
+  results.filter((album, index) => {
+    if (index < 10){
+      filteredResults.push(album)
+    }
+  })
 
   setChosenArtist(artist);
 
@@ -49,6 +73,30 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setCh
               </div>  
             </div>  
 
+            <main className="slider">
+      <section className="sliderside">
+
+        {/* <Carousel
+          autoPlay
+          interval={6000}
+          infiniteLoop
+          centerMode
+        >
+        
+          {
+          filteredResults.slice(0, 9).map((slide) => {
+          
+          return (
+            <div key={slide.name}>
+              <img id="imgslide" src={slide.image[3]["#text"]} alt={`Couverture de l'album ${slide.name}`} />
+              
+            </div>
+            )})
+          }
+        </Carousel> */}
+      </section>
+    </main>
+
             <div className="single-tracks">
               {chosenAlbum.tracks.track.map((song, index) => {
                 return(
@@ -58,7 +106,7 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setCh
                      type="button" 
                      className="single-title-button"
                      value={song.name} 
-                     onClick={handleSingleChoice}>{song.name}, {song.duration}</button>
+                     onClick={handleSingleChoice}>{song.name}</button>
                   </div>
                 )                
               })}

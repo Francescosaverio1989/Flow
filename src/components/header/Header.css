@@ -12,6 +12,11 @@
 
 .home-logo{
     width: 300px;
+    transition: width 0.5s ease-in-out;
+}
+
+.home-logo:hover{
+    width: 350px;
 }
 
 .home-header-slogan {

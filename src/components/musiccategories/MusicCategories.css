@@ -32,3 +32,9 @@
 .music-category-container button{
     cursor: pointer;
 }
+
+.music-category-container button:hover{
+    color: #00C4CC;
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease-in-out;
+}

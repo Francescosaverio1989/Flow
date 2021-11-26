@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import './VoteButton.css'
 
-const VoteButton = () => {
+const VoteButton = ({index}) => {
 const [voteResult, setVoteResult] = useState(0);
 
 const handleCount = () => {
     setVoteResult(voteResult + 1);
 }
+
 
     return (
         <div className="vote-button">

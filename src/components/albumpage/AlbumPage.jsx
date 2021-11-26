@@ -22,7 +22,6 @@ const AlbumPage = () => {
 
     return (
         <div>
-            <ResultsAlbums artist={artist} album={album}/>
             <Album artist={artist} album={album} setChosenSingle={setChosenSingle} setChosenArtist={setChosenArtist} handleSingleChoice={handleSingleChoice}/>
             <Lyrics chosenSingle={chosenSingle} chosenArtist={chosenArtist}/>
             <EspaceFlow />

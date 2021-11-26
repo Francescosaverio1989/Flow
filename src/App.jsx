@@ -13,7 +13,6 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/Album" element={<Album />} />
           <Route path="/album/:artist/:album" element={<AlbumPage />}/>
         </Routes>
       </Router>

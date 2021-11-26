@@ -5,6 +5,11 @@
    height: auto;
 }
 
+#imgslide{
+    max-width: 150px;
+    height: auto;
+}
+
 .carousel .thumb{
     margin: 0 5px;
     cursor: pointer;
@@ -22,6 +27,10 @@
         align-items: stretch;
         text-align: center;
         width: 100%;
+    }
+    .slider{
+        width: 200px;
+        height: 500px;
     }
     .slider-wrapper .imgslide{
         width: 250px;

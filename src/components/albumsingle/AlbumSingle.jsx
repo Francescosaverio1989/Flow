@@ -10,7 +10,7 @@ const AlbumSingle = ({name, mbid, artist, image}) => {
             <div className="album-single-info">
                 <h3>{name}</h3>
                 <h4>{artist}</h4>
-                <Link to={`/album/${artist}/${name}`}><p>Explore</p></Link>
+                <Link to={`/album/${artist}/${name}`}><p><span className="clean-link"> Explore</span></p></Link>
             </div>
         </div>
     )

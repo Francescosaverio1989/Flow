@@ -35,7 +35,7 @@ const EspaceFlow = () => {
         <>
             <section className="espace-flow">
                 <h2>Flow Space</h2>
-                <p>Let everything go</p>
+                <p id="letgo">Let everything go</p>
                 <p>
                 Music is meant to make you feel, dream, hope. As artists, we write albums to tell a story. Flow is an app that is meant for you to also tell your own story. To tell us how you feel. Let the words pour out of your heart and let your soul feel how music vibrations take you to another dimension.
                 </p>
@@ -44,18 +44,6 @@ const EspaceFlow = () => {
                         {
                             userStories.map(({title, story}, index) => <PostedStories key={index} title={title} story={story}/>)
                         }
-<<<<<<< HEAD
-
-                    </div>
-                    <div className="posted-stories-music">
-                    {userMusic.map(({musicTitle, artiste}, index) => 
-                    <PostedMusic 
-                    key={index} 
-                    musicTitle={musicTitle} 
-                    artiste={artiste}/>)
-                    } 
-                    <UserStories userStories={userStories} setUserStories={setUserStories}/>
-=======
                     
                     </div>
                     <div className="posted-stories-music">
@@ -63,11 +51,10 @@ const EspaceFlow = () => {
                     {
                             userMusic.map(({musicTitle, artist}, index) => {
                             
-                            return <PostedMusic key={index} musicTitle={musicTitle} artist={artist} setUserMusic={setUserMusic}/>})
+                            return <PostedMusic key={index} index={index} musicTitle={musicTitle} artist={artist} setUserMusic={setUserMusic}/>})
                         }
                      
                         <UserStories userStories={userStories} setUserStories={setUserStories} userMusic={userMusic} setUserMusic={setUserMusic}/>
->>>>>>> main
                     </div>
                 </div>  
             </section>
