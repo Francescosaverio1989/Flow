@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";  // requires a loader 
 import Home from "./components/home/Home";
-import { Album } from "./components/album/Album.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./App.css";
 import AlbumPage from "./components/albumpage/AlbumPage";
