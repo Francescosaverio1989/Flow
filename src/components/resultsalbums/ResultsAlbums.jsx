@@ -29,9 +29,6 @@ const ResultsAlbums = ({artist, album}) => {
           <title>Résultats</title>
         </Helmet>
 
-        <div className="albumName">
-          <h1>{album}</h1>
-        </div>
         {/* <Carousel
           autoPlay
           interval={6000}

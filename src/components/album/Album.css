@@ -43,3 +43,8 @@
     border: none;
     color: white;
 }
+
+.single-title-button:hover{
+    cursor: pointer;
+    color: #00C4CC;
+}
