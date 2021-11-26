@@ -1,16 +1,27 @@
 /* Album.css */
 
-.albumsection-container{
+.header-album-container{
     display: flex;
     justify-content:space-evenly;
     padding: 12px;
-
 }
 
-.albumsection-col2{
+.header-album-col2{
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 12px;
+}
 
+.header-album-album{
+    color: #4C0BD1;
+}
+
+.header-album-artist{
+    color: #00C4CC;
+}
+
+.tracks-album{
+    background-color: #121640;
+    color: #FFFDFF;
 }

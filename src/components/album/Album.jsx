@@ -32,13 +32,13 @@ export const Album = ({artist, album}) => {
       <div>
         { chosenAlbum &&
           <>
-            <div className="albumsection-container">
+            <div className="header-album-container">
                            
               <img src={chosenAlbum.image[3]["#text"]} alt={chosenAlbum.image['#text']} />
 
-              <div className="albumsection-col2">
-                <h2>{chosenAlbum.name}</h2>
-                <h3>{chosenAlbum.artist}</h3>
+              <div className="header-album-col2">
+                <h2 className ="header-album-album">{chosenAlbum.name}</h2>
+                <h3 className ="header-album-artist">{chosenAlbum.artist}</h3>
                 {/* <p>wiki : {album.wiki.key=(content)}</p> */}
                 {/* released */}
               </div>
@@ -47,7 +47,7 @@ export const Album = ({artist, album}) => {
 
 
 
-            <div>
+            <div className="tracks-album">
               {chosenAlbum.tracks.track.map(song => {
                 return(
                   <>
