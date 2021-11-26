@@ -1,11 +1,10 @@
 
 import { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
 import axios from 'axios';
 import './Album.css';
-import { Singles } from "./Singles.jsx";
+// import { Singles } from "./Singles.jsx";
 
-export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
+export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setChosenArtist}) => {
 
   const [chosenAlbum, setChosenAlbum] = useState();
 
@@ -13,6 +12,8 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
   console.log(artist);
   console.log("L'album en cours est :")
   console.log(album);
+
+  setChosenArtist(artist);
 
 
   useEffect(() => {

@@ -19,19 +19,19 @@ const EspaceFlow = () => {
     const [userMusic, setUserMusic] = useState([
         {
             musicTitle: "Titre de musique",
-            artiste: "Artiste"
+            artist: "Artiste"
         },
         {
             musicTitle: "Titre de musique",
-            artiste: "Artiste"
+            artist: "Artiste"
         },
         {
             musicTitle: "Titre de musique",
-            artiste: "Artiste"
+            artist: "Artiste"
         },
         {
             musicTitle: "Titre de musique",
-            artiste: "Artiste"
+            artist: "Artiste"
         }
     ])
 
@@ -56,13 +56,13 @@ const EspaceFlow = () => {
                     <div className="posted-stories-music">
 
                     {
-                            userMusic.map(({musicTitle, artiste}, index) => {
+                            userMusic.map(({musicTitle, artist}, index) => {
                                 console.log(musicTitle)
                             
-                            return <PostedMusic key={index} musicTitle={musicTitle} artiste={artiste}/>})
+                            return <PostedMusic key={index} musicTitle={musicTitle} artist={artist} setUserMusic={setUserMusic}/>})
                         }
                      
-                        <UserStories userStories={userStories} setUserStories={setUserStories}/>
+                        <UserStories userStories={userStories} setUserStories={setUserStories} userMusic={userMusic} setUserMusic={setUserMusic}/>
                     </div>
 
                 </div>  

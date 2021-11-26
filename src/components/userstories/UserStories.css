@@ -31,10 +31,12 @@
 
 }
 
+
 .user-stories-countainer label, 
 .user-stories-countainer input,
 .user-stories-countainer textarea,
-.user-stories-countainer button {
+.search-bar-song input,
+.btn {
   margin: 0.8rem 0 0.2rem 0;
   font-size: 0.8rem;
 }
@@ -43,24 +45,38 @@
   color: #4C0BD1;
 }
 
-.user-stories-countainer button {
+.btn {
   padding: 0.5rem 1rem;
   border-radius: 30px;
   border: none;
   background-color: #4C0BD1;
   color: white;
-  
 }
 
-.user-stories-countainer input {
+.user-stories-countainer input, 
+.search-bar-song input {
   border: 1px solid #00c4cc;
   border-radius: 5px;
   padding: 0.3rem 1rem;
+  width: 100%;
 }
 
 .user-stories-countainer textarea{
   border: 1px solid #00c4cc;
   border-radius: 5px;
   padding: 0.3rem 1rem;
-  min-height: 150px;
+  min-height: fit-content;
+}
+
+.user-story-h4 {
+  color: white;
+  font-weight: normal;
+  text-align: left;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  min-width: 100%;
+}
+
+#artist {
+  height: 2rem;
 }
