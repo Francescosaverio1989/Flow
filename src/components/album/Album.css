@@ -1,5 +1,10 @@
 /* Album.css */
 
+.header-album-logo{
+    width: 100px;
+    margin: 12px;
+}
+
 .header-album-container{
     display: flex;
     justify-content:space-evenly;
