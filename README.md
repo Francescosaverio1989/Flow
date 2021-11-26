@@ -2,24 +2,38 @@
 Hackathon 25_26 nov 2021
 
 It could give apps of the type :
+
 🎸 Sharing / generating playlists
+
 🎸 Topics around webradios
+
 🎸 Tinder like to form a rock band
+
 🎸 Guitar hero style game
+
 There are a few APIs around music (without
 authentication).
 Here are some examples :
+
 🎷 Spotify (possible without auth)
+
 🎷 Web radios
+
 🎷 Lyrics
+
 🎷 API music list
 
+
 Judging criteria : 
+
     UX DESIGN / 
+    
     TECHNICAL ASPECTS / 
+    
     CONCEPT ORAL PRESENTATION / 
 ______________________________________________________________________________________________________________
-“Notre musique raconte une histoire et nos histoires doivent être écoutées comme nous les avons pensées.” 
+“Notre musique raconte une histoire et nos histoires doivent être écoutées comme nous les avons pensées.”
+
 Adele,  21 nov. 2021
 
 Flow est une App React sur le thème de la “musicothérapie”. 
