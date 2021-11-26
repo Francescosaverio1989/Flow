@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
 import "./ResultsAlbums.css";
-import { Carousel } from 'react-responsive-carousel';
 import { Helmet } from 'react-helmet';
 
 
@@ -29,23 +27,6 @@ const ResultsAlbums = ({artist, album}) => {
           <title>Résultats</title>
         </Helmet>
 
-        {/* <Carousel
-          autoPlay
-          interval={6000}
-          infiniteLoop
-          centerMode
-        >
-          {
-            results.filter((albums) => (albums.album.length === 13)).slice(0, 10).map(slide => (
-              <div key={slide.album}>
-                <img className="imgslide" src={slide.image[0]["#text"]} />
-                <div className="overlay">
-                  <a href={`/ProductId/${slide.album}`}> <h2 className="overlay__title">{slide.name}</h2>
-                  </a>
-                </div>
-              </div>
-            ))}
-        </Carousel> */}
       </section>
     </main>
   )
