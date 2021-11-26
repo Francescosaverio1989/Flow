@@ -21,8 +21,8 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setCh
         album && artist ? getData() : console.log(`albumName et artistName ne sont pas définis`);
     }, [album, artist]);
 
-    console.log("chosen album");
-    console.log(chosenAlbum);
+    console.log("The chosen album is : *******")
+    console.log(chosenAlbum)
 
     return (
       <div>

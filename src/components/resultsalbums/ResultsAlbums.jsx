@@ -4,7 +4,7 @@ import "./ResultsAlbums.css";
 import { Helmet } from 'react-helmet';
 
 
-const ResultsAlbums = ({artist, album}) => {
+const ResultsAlbums = ({ artist, album }) => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -13,20 +13,50 @@ const ResultsAlbums = ({artist, album}) => {
 
   const getAlbums = () => {
     axios
-      .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&artist=${artist}&album=${album}&format=json`)
-      .then(response => setResults(response.data.album))
+      .get(`https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&format=json`)
+      .then(response => {
+        console.log(response.data.topalbums.album)
+        setResults(response.data.topalbums.album)
+      })
   }
 
-  console.log(results)
+  const filteredResults = [];
+
+  results.filter((album, index) => {
+    if (index < 10){
+      filteredResults.push(album)
+    }
+  })
 
   return (
     <main className="slider">
       <section className="sliderside">
 
         <Helmet>
-          <title>Résultats</title>
+          <title>Albums</title>
         </Helmet>
 
+        <div className="albumName">
+          <h3>{artist}</h3>
+        </div>
+        <Carousel
+          autoPlay
+          interval={6000}
+          infiniteLoop
+          centerMode
+        >
+        
+          {
+          filteredResults.slice(0, 9).map((slide) => {
+          
+          return (
+            <div key={slide.name}>
+              <img className="imgslide" src={slide.image[3]["#text"]} alt={`Couverture de l'album ${slide.name}`} />
+              
+            </div>
+            )})
+          }
+        </Carousel>
       </section>
     </main>
   )

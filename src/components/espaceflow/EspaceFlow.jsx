@@ -44,6 +44,18 @@ const EspaceFlow = () => {
                         {
                             userStories.map(({title, story}, index) => <PostedStories key={index} title={title} story={story}/>)
                         }
+<<<<<<< HEAD
+
+                    </div>
+                    <div className="posted-stories-music">
+                    {userMusic.map(({musicTitle, artiste}, index) => 
+                    <PostedMusic 
+                    key={index} 
+                    musicTitle={musicTitle} 
+                    artiste={artiste}/>)
+                    } 
+                    <UserStories userStories={userStories} setUserStories={setUserStories}/>
+=======
                     
                     </div>
                     <div className="posted-stories-music">
@@ -55,8 +67,8 @@ const EspaceFlow = () => {
                         }
                      
                         <UserStories userStories={userStories} setUserStories={setUserStories} userMusic={userMusic} setUserMusic={setUserMusic}/>
+>>>>>>> main
                     </div>
-
                 </div>  
             </section>
         </>
