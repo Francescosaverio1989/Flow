@@ -31,8 +31,6 @@ const EspaceFlow = () => {
         }
     ])
 
-    
-
     return (
         <>
             <section className="espace-flow">
@@ -46,14 +44,12 @@ const EspaceFlow = () => {
                         {
                             userStories.map(({title, story}, index) => <PostedStories key={index} title={title} story={story}/>)
                         }
-                        
                     
                     </div>
                     <div className="posted-stories-music">
 
                     {
                             userMusic.map(({musicTitle, artist}, index) => {
-                                console.log(musicTitle)
                             
                             return <PostedMusic key={index} musicTitle={musicTitle} artist={artist} setUserMusic={setUserMusic}/>})
                         }

@@ -5,22 +5,19 @@ import "./Lyrics.css"
 
 const Lyrics = ({chosenSingle, chosenArtist}) => {
     const [lyricsMusics, setLyricsMusics] = useState("")
+
+    const apiArtist = chosenArtist.replace(/ /g, '+');
+    const apiSingle = chosenSingle.replace(/ /g, '+');
     
     const getLyricsFromApi= () => {
-        axios.get(`https://api.lyrics.ovh/v1/${chosenArtist}/${chosenSingle}`)
+        axios.get(`https://api.lyrics.ovh/v1/${apiArtist}/${apiSingle}`)
         .then(response => setLyricsMusics(response.data))
         .catch(err => setLyricsMusics("No Lyrics Available"))
     }
 
-    console.log("chosen single -----")
-    console.log(chosenSingle)
-    console.log("chosen artist -----")
-    console.log(chosenArtist)
-
-
     useEffect(() =>{
         getLyricsFromApi()
-    }, []);
+    }, [apiArtist, apiSingle]);
 
 
     return (

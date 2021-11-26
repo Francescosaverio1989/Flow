@@ -9,13 +9,7 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setCh
 
   const [chosenAlbum, setChosenAlbum] = useState();
 
-  console.log("L'artiste en cours est :")
-  console.log(artist);
-  console.log("L'album en cours est :")
-  console.log(album);
-
   setChosenArtist(artist);
-
 
   useEffect(() => {
     const getData = () => {

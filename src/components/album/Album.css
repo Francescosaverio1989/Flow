@@ -47,8 +47,6 @@
 
 }
 
-
-
 .single-track-container{
     display: flex;
     align-items: center;
@@ -67,9 +65,11 @@
 .single-tracks{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 2rem 5rem;
     background-color: #121640;
     color: #FFFDFF;
+    max-height: 600px;
 }
 
 .single-title-button {
