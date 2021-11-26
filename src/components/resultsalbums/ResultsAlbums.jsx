@@ -22,7 +22,13 @@ const ResultsAlbums = ({ artist, album }) => {
       })
   }
 
-  console.log(results)
+  const filteredResults = [];
+
+  results.filter((album, index) => {
+    if (index < 10){
+      filteredResults.push(album)
+    }
+  })
 
   return (
     <main className="slider">
@@ -42,24 +48,20 @@ const ResultsAlbums = ({ artist, album }) => {
           infiniteLoop
           centerMode
         >
+        
           {
-            results.filter(album => album.length === 10);
-}
-
-          console.log(results);
-            
-
-
-          {/*}.slice(0, 9)
-            .map(slide => (
-              <div key={slide.album}>
-            <img className="imgslide" src={slide.album.image[0]["#text"]} alt="" />
-            <div className="overlay">
-              <a href={`/Albums/${slide.album}`}> <h2 className="overlay__title">{slide.name}</h2>
-              </a>
+          filteredResults.map((slide) => {
+          
+          return (
+            <div key={slide.name}>
+              <img className="imgslide" src={slide.image[3]["#text"]} alt={`Couverture de l'album ${slide.name}`} />
+              <div className="overlay">
+                <a href={`/Albums/${slide.album}`}> <h2 className="overlay__title">{slide.name}</h2>
+                </a>
+              </div>
             </div>
-          </div>
-            ))*/}
+            )})
+          }
         </Carousel>
       </section>
     </main>
@@ -67,20 +69,3 @@ const ResultsAlbums = ({ artist, album }) => {
 }
 
 export default ResultsAlbums;
-
-/*<div>
-                 <img alt="" src={album} />
-                 <p className="legend">Legend 1</p>
-               </div>
-               <div>
-                 <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
-                 <p className="legend">Legend 2</p>
-               </div>
-               <div>
-                 <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
-                 <p className="legend">Legend 2</p>
-               </div>
-               <div>
-                 <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
-                 <p className="legend">Legend 2</p>
-               </div>*/
