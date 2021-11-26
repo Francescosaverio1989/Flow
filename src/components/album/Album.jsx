@@ -1,12 +1,15 @@
 
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import './Album.css';
-import { Singles } from "./Singles.jsx";
+import logo from '../../assets/images/logo-flow.png'
 
-export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
+export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setChosenArtist}) => {
 
   const [chosenAlbum, setChosenAlbum] = useState();
+
+  setChosenArtist(artist);
 
   useEffect(() => {
     const getData = () => {
@@ -23,24 +26,33 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
 
     return (
       <div>
+        <Link to={`/`}><img src={logo} className="header-album-logo" alt="Logo flow" /></Link>
+        
         { chosenAlbum &&
           <>
-            <div className="albumsection-container">
-                           
-              <img src={chosenAlbum.image[3]["#text"]} alt={chosenAlbum.image['#text']} />
+            <div className="header-album-container">
 
-              <div className="albumsection-col2">
-                <h2>{chosenAlbum.name}</h2>
-                <h3>{chosenAlbum.artist}</h3>
+              <div className="header-album-img-container">            
+                <img className="header-album-img" src={chosenAlbum.image[4]["#text"]} alt={chosenAlbum.image['#text']} />
+              </div> 
+
+              <div className="header-album-col2">
+                <h2 className ="header-album-album">{chosenAlbum.name}</h2>
+                <h3 className ="header-album-artist">{chosenAlbum.artist}</h3>
                 {/* <p>wiki : {album.wiki.key=(content)}</p> */}
+                {/* <p className ="header-album-wiki">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p className ="header-album-wiki">Adipisci est quis amet incidunt laborum dignissimos odio molestiae autem, dolorum architecto repellendus cum modi sit excepturi ipsam dolor facere numquam deserunt.</p> */}
                 {/* released */}
+                {/* <p className ="header-album-Released">Released : 2021-01-10</p> */}
+                <button className="header-album-link"><a href={chosenAlbum.url} target="_blank">Listen on Last FM</a></button>
+
               </div>  
             </div>  
 
             <div className="single-tracks">
               {chosenAlbum.tracks.track.map((song, index) => {
                 return(
-                  <div key={index} className="single-track-countainer">
+                  <div key={index} className="single-track-container">
                     <div className="trackNumber">{index}</div>
                      <button 
                      type="button" 

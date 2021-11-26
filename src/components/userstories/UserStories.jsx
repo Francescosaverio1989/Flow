@@ -1,24 +1,39 @@
 import React, { useState } from "react";
 import "./UserStories.css";
 
-const UserStories = ({ parentId, userStories, setUserStories }) => {
+const UserStories = ({ parentId, userStories, setUserStories, userMusic, setUserMusic }) => {
   const [title, setTitle] = useState("");
   const [story, setStory] = useState("");
 
-  const handleCommentSubmission = async (e) => {
+  const [musicTitle, setMusicTitle] = useState("");
+  const [artist, setArtist] = useState("");
+
+  const handleSubmissionStory = async (e) => {
     e.preventDefault();
     let userStory = {
       title: title,
       story: story,
     };
     setUserStories([...userStories, userStory])
-    console.log(userStories);
+  };
+  
+  const handleSubmissionSong = async (e) => {
+    e.preventDefault();
+    let userSong = {
+      musicTitle: musicTitle,
+      artist: artist
+    };
+    setUserMusic([...userMusic, userSong])
+    console.log("user music -------")
+    console.log(userMusic)
+
   };
 
   return (
     <div className="user-stories">
       <h3>LET IT FLOW</h3>
-      <form className="user-stories-countainer" onSubmit={(e) => handleCommentSubmission(e)}>
+      <h4 className="user-story-h4">Post your own story</h4>
+      <form className="user-stories-countainer" onSubmit={(e) => handleSubmissionStory(e)}>
         <label htmlFor="title">
           Title </label>
           <input
@@ -30,13 +45,40 @@ const UserStories = ({ parentId, userStories, setUserStories }) => {
           />
         
         <label htmlFor="story">
-          Post your own story
+          Story
           </label>
           <textarea
             id="story"
             onChange={(e) => setStory(e.target.value)}
             value={story}
             title="story"
+            required="required"
+          ></textarea>
+        
+        <button type="submit" className="btn">
+          Post
+        </button>
+      </form>
+      <h4 className="user-story-h4">Suggest another song</h4>
+      <form className="user-stories-countainer" onSubmit={(e) => handleSubmissionSong(e)}>
+        <label htmlFor="musicTitle">
+          Title </label>
+          <input
+            type="text"
+            id="musicTitle"
+            value={musicTitle}
+            onChange={(e) => setMusicTitle(e.target.value)}
+            required
+          />
+        
+        <label htmlFor="artist">
+          Artist
+          </label>
+          <textarea
+            id="artist"
+            onChange={(e) => setArtist(e.target.value)}
+            value={artist}
+            title="artist"
             required="required"
           ></textarea>
         
