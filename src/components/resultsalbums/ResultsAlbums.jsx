@@ -7,15 +7,13 @@ import { Helmet } from 'react-helmet';
 
 
 const ResultsAlbums = () => {
-
+  const [results, setResults] = useState([]);
   const params = useParams();
 
   console.log("L'artiste en cours est :")
   console.log(params.artiste);
   console.log("L'album en cours est :")
   console.log(params.album);
-
-  const [results, setResults] = useState([]);
 
   useEffect(() => {
     getAlbums()
