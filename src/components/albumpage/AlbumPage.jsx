@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import EspaceFlow from '../espaceflow/EspaceFlow'
 import { Album } from '../album/Album'
 import './AlbumPage.css'
@@ -13,11 +13,17 @@ const AlbumPage = () => {
     const artist = params.artist;
     const album = params.album;
 
+    const [chosenSingle, setChosenSingle] = useState('');
+
+    const handleSingleChoice = (e) => {
+        setChosenSingle(e.target.value);
+    }
+
     return (
         <div>
             <ResultsAlbums artist={artist} album={album}/>
-            <Album artist={artist} album={album}/>
-            <Lyrics />
+            <Album artist={artist} album={album} setChosenSingle={setChosenSingle} handleSingleChoice={handleSingleChoice}/>
+            <Lyrics chosenSingle={chosenSingle}/>
             <EspaceFlow />
             <Footer />
         </div>

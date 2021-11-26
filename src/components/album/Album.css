@@ -12,5 +12,34 @@
     flex-direction: column;
     align-items: stretch;
     padding: 12px;
+}
 
+.single-track-countainer{
+    display: flex;
+    align-items: center;
+}
+
+.trackNumber {
+    margin: 1rem 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #E43397;
+    color: white;
+    text-align: center;
+}
+
+.single-tracks{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    background-color: #121640;
+    color: white;
+}
+
+.single-title-button {
+    background-color: transparent;
+    padding: 0.5rem 0;
+    border: none;
+    color: white;
 }
