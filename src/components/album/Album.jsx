@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Album.css';
-import { Singles } from "./Singles.jsx";
+// import { Singles } from "./Singles.jsx";
 
 export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
 

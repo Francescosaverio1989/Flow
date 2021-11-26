@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import EspaceFlow from '../espaceflow/EspaceFlow'
 import { Album } from '../album/Album'
 import './AlbumPage.css'
-import Lyrics from '../../lyrics/Lyrics'
+import Lyrics from '../lyrics/Lyrics'
 import Footer from '../footer/Footer'
 import { useParams } from "react-router-dom";
 import ResultsAlbums from '../resultsalbums/ResultsAlbums'
