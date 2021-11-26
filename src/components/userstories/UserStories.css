@@ -1,0 +1,66 @@
+.espace-cont {
+  background-color: #00c4cc;
+  color: black;
+}
+
+.user-stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #E43397;
+  border-radius: 15px;;
+}
+
+.user-stories h3 {
+  color: #4C0BD1;
+  font-weight: normal;
+  margin: 1rem;
+}
+
+.user-stories-countainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background-color: white;
+
+}
+
+.user-stories-countainer label, 
+.user-stories-countainer input,
+.user-stories-countainer textarea,
+.user-stories-countainer button {
+  margin: 0.8rem 0 0.2rem 0;
+  font-size: 0.8rem;
+}
+
+.user-stories-countainer label {
+  color: #4C0BD1;
+}
+
+.user-stories-countainer button {
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  border: none;
+  background-color: #4C0BD1;
+  color: white;
+  
+}
+
+.user-stories-countainer input {
+  border: 1px solid #00c4cc;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+}
+
+.user-stories-countainer textarea{
+  border: 1px solid #00c4cc;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  min-height: 150px;
+}

@@ -1,0 +1,80 @@
+/* Album.css */
+
+.header-album-container{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 12px;
+    margin: 7rem 1rem;
+}
+
+.header-album-img{
+    max-width: 100%;
+    max-height: auto;
+
+}
+
+.header-album-col2{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+}
+
+.header-album-album{
+    color: #4C0BD1;
+    padding: 12px;
+}
+
+.header-album-artist{
+    color: #00C4CC;
+    padding: 12px;
+}
+
+.header-album-wiki{
+    max-width: 60%;
+    color: #121640;
+    padding: 12px;
+}
+
+.header-album-Released{
+    color: #CB88FF;
+    padding: 12px;
+
+}
+
+
+
+.single-track-container{
+    display: flex;
+    align-items: center;
+}
+
+.trackNumber {
+    margin: 1rem 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #E43397;
+    color: #FFFDFF;
+    text-align: center;
+}
+
+.single-tracks{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    background-color: #121640;
+    color: #FFFDFF;
+}
+
+.single-title-button {
+    background-color: transparent;
+    padding: 0.5rem 0;
+    border: none;
+    color: #FFFDFF;
+}
+
+.single-title-button:hover{
+    cursor: pointer;
+    color: #00C4CC;
+}
