@@ -1,0 +1,46 @@
+body{
+  background-position: center;
+  width: 100%;
+  height: 640px;
+  margin-top: 80px;
+}
+
+.carousel-root{
+   position: absolute;
+   margin-top: 10px;
+   width: 100%;
+   height: auto;
+}
+
+.slider{
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel .thumb{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 767px)  {
+    .carousel-root{
+        width: 767px;
+        margin-left: 20%;
+        margin-right: 20%;
+     }
+    .albumName h1{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        width: 100%;
+    }
+    .slider{
+        width: 200px;
+        height: 500px;
+    }
+    .slider-wrapper .imgslide{
+        width: 250px;
+        height: 500px;
+    }
+}
