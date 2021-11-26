@@ -44,7 +44,7 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setCh
                 <p className ="header-album-wiki">Adipisci est quis amet incidunt laborum dignissimos odio molestiae autem, dolorum architecto repellendus cum modi sit excepturi ipsam dolor facere numquam deserunt.</p> */}
                 {/* released */}
                 {/* <p className ="header-album-Released">Released : 2021-01-10</p> */}
-                <button className="header-album-link"><a href={chosenAlbum.url}>Listen on Last FM</a></button>
+                <button className="header-album-link"><a href={chosenAlbum.url} target="_blank">Listen on Last FM</a></button>
 
               </div>  
             </div>  
