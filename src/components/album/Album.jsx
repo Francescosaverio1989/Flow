@@ -40,11 +40,8 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
                 <h3>{chosenAlbum.artist}</h3>
                 {/* <p>wiki : {album.wiki.key=(content)}</p> */}
                 {/* released */}
-              </div>
-              
+              </div>  
             </div>  
-
-
 
             <div className="single-tracks">
               {chosenAlbum.tracks.track.map((song, index) => {

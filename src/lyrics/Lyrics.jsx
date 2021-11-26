@@ -3,7 +3,7 @@ import React from 'react'
 import axios from 'axios'
 import "./Lyrics.css"
 
-const Lyrics = () => {
+const Lyrics = ({chosenSingle}) => {
     const [lyricsMusics, setLyricsMusics] = useState("")
     
     const getLyricsFromApi= () => {
@@ -18,7 +18,7 @@ const Lyrics = () => {
 
     return (
         <section className="lyrics-countainer">
-            <h1>Title chosen song</h1>
+            <h1>{chosenSingle}</h1>
             <div className="lyrics-and-story">
                 <div>
                     <h4>Paroles</h4>
