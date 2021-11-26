@@ -44,7 +44,31 @@
 .header-album-Released{
     color: #CB88FF;
     padding: 12px;
+}
 
+.header-album-link{
+    background-color: #CB88FF;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+}
+
+.header-album-link a{
+    color: #121640;
+    text-decoration: none;
+}
+
+.header-album-link:hover{
+    background-color: #121640;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+}
+
+.header-album-link:hover a{
+    color: #FFFDFF;
+    text-decoration: none;
 }
 
 
