@@ -35,7 +35,6 @@
 .user-stories-countainer label, 
 .user-stories-countainer input,
 .user-stories-countainer textarea,
-.search-bar-song input,
 .btn {
   margin: 0.8rem 0 0.2rem 0;
   font-size: 0.8rem;
@@ -53,8 +52,7 @@
   color: white;
 }
 
-.user-stories-countainer input, 
-.search-bar-song input {
+.user-stories-countainer input {
   border: 1px solid #00c4cc;
   border-radius: 5px;
   padding: 0.3rem 1rem;
@@ -73,6 +71,7 @@
   font-weight: normal;
   text-align: left;
   font-size: 0.8rem;
+  margin-left: 2rem;
   margin-bottom: 1rem;
   min-width: 100%;
 }

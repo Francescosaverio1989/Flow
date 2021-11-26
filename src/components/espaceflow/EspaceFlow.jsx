@@ -9,29 +9,25 @@ const EspaceFlow = () => {
     const [userStories, setUserStories] = useState([
         {title: "Une matinée assoupie", 
     story: "C'était un soir d'été, je me baladais dans les sous bois près de chez moi. Je sens encore le parfum du printemps qui éveillait aux aurores. Le son chantant des moineaux amoureux venait tourmenter l'état endormi, des colombes assoupies perchées sur la branche d'un saule meurtri."},
-        {title: "Ceci est un titre 2", 
-    story: "Histoire raccontée - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisi arcu, dictum non justo quis, viverra sagittis velit. Mauris metus leo, mollis sollicitudin molestie viverra, tristique et nisl. Duis neque orci, pharetra sed mauris vitae, efficitur tincidunt risus. Integer lobortis leo eget maximus consectetur. Integer vitae semper felis, eu viverra massa. Phasellus varius eros vitae semper convallis. Cras nec lacinia tellus, nec malesuada orci."},
-        {title: "Ceci est un titre 3", 
-    story: "Histoire raccontée - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisi arcu, dictum non justo quis, viverra sagittis velit. Mauris metus leo, mollis sollicitudin molestie viverra, tristique et nisl. Duis neque orci, pharetra sed mauris vitae, efficitur tincidunt risus. Integer lobortis leo eget maximus consectetur. Integer vitae semper felis, eu viverra massa. Phasellus varius eros vitae semper convallis. Cras nec lacinia tellus, nec malesuada orci."},
+        {title: "Balade", 
+    story: "Longue marche, Sans que le ciel Ne bouge. Aller pieds nus sur les rochers un danger agréable. Au bord de l’eau poussent des fleurs sur les maillots de bain."},
+        {title: "Les amoureux", 
+    story: "L'eau qui caresse le rivage, La rose qui s'ouvre au zéphir, Le vent qui rit sous le feuillage, Tout dit qu'aimer est un plaisir. De deux amants l'égale flamme Sait doublement les rendre heureux. Les indifférents n'ont qu'une âme ; Mais lorsqu'on aime, on en a deux."},
 
     ]);
 
     const [userMusic, setUserMusic] = useState([
         {
-            musicTitle: "Titre de musique",
-            artist: "Artiste"
+            musicTitle: "Easy on Me",
+            artist: "Adele"
         },
         {
-            musicTitle: "Titre de musique",
-            artist: "Artiste"
+            musicTitle: "One Thing",
+            artist: "One Direction"
         },
         {
-            musicTitle: "Titre de musique",
-            artist: "Artiste"
-        },
-        {
-            musicTitle: "Titre de musique",
-            artist: "Artiste"
+            musicTitle: "Adventure of a Lifetime ",
+            artist: "Coldplay"
         }
     ])
 
@@ -40,10 +36,10 @@ const EspaceFlow = () => {
     return (
         <>
             <section className="espace-flow">
-                <h2>Espace Flow</h2>
-                <p>Laissez vous porter par votre imagination</p>
+                <h2>Flow Space</h2>
+                <p>Let everything go</p>
                 <p>
-                Histoire raccontée - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisi arcu, dictum non justo quis, viverra sagittis velit. Mauris metus leo, mollis sollicitudin molestie viverra, tristique et nisl. Duis neque orci, pharetra sed mauris vitae, efficitur tincidunt risus. Integer lobortis leo eget maximus consectetur. Integer vitae semper felis, eu viverra massa. Phasellus varius eros vitae semper convallis. Cras nec lacinia tellus, nec malesuada orci.
+                Music is meant to make you feel, dream, hope. As artists, we write albums to tell a story. Flow is an app that is meant for you to also tell your own story. To tell us how you feel. Let the words pour out of your heart and let your soul feel how music vibrations take you to another dimension.
                 </p>
                 <div className="espace-flow-post-countainer">
                     <div>
