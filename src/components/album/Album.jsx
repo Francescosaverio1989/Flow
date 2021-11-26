@@ -1,8 +1,9 @@
 
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import './Album.css';
-// import { Singles } from "./Singles.jsx";
+import logo from '../../assets/images/logo-flow.png'
 
 export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setChosenArtist}) => {
 
@@ -31,6 +32,8 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setCh
 
     return (
       <div>
+        <Link to={`/`}><img src={logo} className="header-album-logo" alt="Logo flow" /></Link>
+        
         { chosenAlbum &&
           <>
             <div className="header-album-container">
@@ -46,7 +49,7 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice, setCh
                 {/* <p className ="header-album-wiki">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 <p className ="header-album-wiki">Adipisci est quis amet incidunt laborum dignissimos odio molestiae autem, dolorum architecto repellendus cum modi sit excepturi ipsam dolor facere numquam deserunt.</p> */}
                 {/* released */}
-                <p className ="header-album-Released">Released : 202-01-10</p>
+                {/* <p className ="header-album-Released">Released : 2021-01-10</p> */}
 
               </div>  
             </div>  

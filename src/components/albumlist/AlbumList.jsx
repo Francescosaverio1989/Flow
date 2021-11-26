@@ -9,7 +9,7 @@ const AlbumList = ({chosenInspiration}) => {
     console.log(chosenInspiration);
 
     useEffect(() => {
-        axios.get(`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${chosenInspiration}&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&format=json`)
+        axios.get(`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${chosenInspiration}&api_key=${process.env.REACT_APP_API_KEY}&format=json`)
         .then(res => res.data.results.albummatches.album)
         .then(data => setAlbumList(data))
 
