@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./App.css";
 import AlbumPage from "./components/albumpage/AlbumPage";
+import { Album } from "./components/album/Album";
 
 const App = () => {
   return (
