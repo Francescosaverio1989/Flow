@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
 import "./UserStories.css";
 
 const UserStories = ({ parentId, userStories, setUserStories }) => {

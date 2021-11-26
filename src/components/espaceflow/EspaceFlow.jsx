@@ -3,7 +3,6 @@ import './EspaceFlow.css'
 import PostedMusic from '../postedmusic/PostedMusic'
 import PostedStories from '../postedstories/PostedStories'
 import UserStories from '../userstories/UserStories'
-import Footer from '../footer/Footer'
 
 const EspaceFlow = () => {
 
@@ -68,7 +67,6 @@ const EspaceFlow = () => {
 
                 </div>  
             </section>
-            <Footer />
         </>
     )
 }

@@ -4,45 +4,40 @@ import axios from 'axios';
 import './Album.css';
 import { Singles } from "./Singles.jsx";
 
-export const Album = () => {
-  const [album, setAlbum] = useState();
-  // const params = useParams();
+export const Album = ({artist, album}) => {
 
-  // console.log("L'artiste en cours est :")
-  // console.log(params.artiste);
-  // const artistName = params.artiste;
-  // console.log("L'album en cours est :")
-  // console.log(params.album);
-  // const albumName = params.album;
+  const [chosenAlbum, setChosenAlbum] = useState();
 
-  //   const { albumName, artistName } = useParams();
-  const artistName = "Cher";
-  const albumName = "Believe";
+  console.log("L'artiste en cours est :")
+  console.log(artist);
+  console.log("L'album en cours est :")
+  console.log(album);
+
 
   useEffect(() => {
     const getData = () => {
       axios
-        .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&album=${albumName}&format=json`)
+        .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artist}&album=${album}&format=json`)
         .then(data =>
-        data.data.album && setAlbum(data.data.album))
+        data.data.album && setChosenAlbum(data.data.album))
       }
-        albumName && artistName ? getData() : console.log(`albumName et artistName ne sont pas définis`);
-    }, [albumName, artistName]);
+        album && artist ? getData() : console.log(`albumName et artistName ne sont pas définis`);
+    }, [album, artist]);
 
-    console.log("album");
-    console.log(album);
+    console.log("chosen album");
+    console.log(chosenAlbum);
 
     return (
       <div>
-        { album &&
+        { chosenAlbum &&
           <>
             <div className="albumsection-container">
                            
-              <img src={album.image[3]["#text"]} alt={album.image['#text']} />
+              <img src={chosenAlbum.image[3]["#text"]} alt={chosenAlbum.image['#text']} />
 
               <div className="albumsection-col2">
-                <h2>{album.name}</h2>
-                <h3>{album.artist}</h3>
+                <h2>{chosenAlbum.name}</h2>
+                <h3>{chosenAlbum.artist}</h3>
                 {/* <p>wiki : {album.wiki.key=(content)}</p> */}
                 {/* released */}
               </div>
@@ -52,7 +47,7 @@ export const Album = () => {
 
 
             <div>
-              {album.tracks.track.map(song => {
+              {chosenAlbum.tracks.track.map(song => {
                 return(
                   <>
                   <div>{song.name}, {song.duration}</div>
