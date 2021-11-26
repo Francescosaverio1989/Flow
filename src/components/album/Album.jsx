@@ -1,10 +1,20 @@
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './Album.css';
 import { Singles } from "./Singles.jsx";
 
 export const Album = () => {
   const [album, setAlbum] = useState();
+  // const params = useParams();
+
+  // console.log("L'artiste en cours est :")
+  // console.log(params.artiste);
+  // const artistName = params.artiste;
+  // console.log("L'album en cours est :")
+  // console.log(params.album);
+  // const albumName = params.album;
+
   //   const { albumName, artistName } = useParams();
   const artistName = "Cher";
   const albumName = "Believe";
@@ -26,11 +36,20 @@ export const Album = () => {
       <div>
         { album &&
           <>
-                
-            <img src={album.image[3]["#text"]} alt={album.image['#text']} />
-            <h3>{album.name}</h3>
-            <p>{album.artist}</p>
-            {/* <p>wiki : {album.wiki.key=(content)}</p> */}
+            <div className="albumsection-container">
+                           
+              <img src={album.image[3]["#text"]} alt={album.image['#text']} />
+
+              <div className="albumsection-col2">
+                <h2>{album.name}</h2>
+                <h3>{album.artist}</h3>
+                {/* <p>wiki : {album.wiki.key=(content)}</p> */}
+                {/* released */}
+              </div>
+              
+            </div>  
+
+
 
             <div>
               {album.tracks.track.map(song => {
@@ -38,8 +57,7 @@ export const Album = () => {
                   <>
                   <div>{song.name}, {song.duration}</div>
                   </>
-                )
-                
+                )                
               })}
             </div>
           </> 
