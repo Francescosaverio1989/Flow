@@ -5,7 +5,7 @@ import axios from 'axios';
 import './Album.css';
 import { Singles } from "./Singles.jsx";
 
-export const Album = ({artist, album}) => {
+export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
 
   const [chosenAlbum, setChosenAlbum] = useState();
 
@@ -41,18 +41,20 @@ export const Album = ({artist, album}) => {
                 <h3 className ="header-album-artist">{chosenAlbum.artist}</h3>
                 {/* <p>wiki : {album.wiki.key=(content)}</p> */}
                 {/* released */}
-              </div>
-              
+              </div>  
             </div>  
 
-
-
-            <div className="tracks-album">
-              {chosenAlbum.tracks.track.map(song => {
+            <div className="single-tracks">
+              {chosenAlbum.tracks.track.map((song, index) => {
                 return(
-                  <>
-                  <div>{song.name}, {song.duration}</div>
-                  </>
+                  <div key={index} className="single-track-countainer">
+                    <div className="trackNumber">{index}</div>
+                     <button 
+                     type="button" 
+                     className="single-title-button"
+                     value={song.name} 
+                     onClick={handleSingleChoice}>{song.name}, {song.duration}</button>
+                  </div>
                 )                
               })}
             </div>
