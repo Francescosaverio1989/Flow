@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Helmet } from 'react-helmet';
 
 
-const ResultsAlbums = ({artist, album}) => {
+const ResultsAlbums = ({ artist, album }) => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -15,8 +15,11 @@ const ResultsAlbums = ({artist, album}) => {
 
   const getAlbums = () => {
     axios
-      .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&artist=${artist}&album=${album}&format=json`)
-      .then(response => setResults(response.data.album))
+      .get(`https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&format=json`)
+      .then(response => {
+        console.log(response.data.topalbums.album)
+        setResults(response.data.topalbums.album)
+      })
   }
 
   console.log(results)
@@ -26,32 +29,58 @@ const ResultsAlbums = ({artist, album}) => {
       <section className="sliderside">
 
         <Helmet>
-          <title>Résultats</title>
+          <title>Albums</title>
         </Helmet>
 
         <div className="albumName">
           <h1>{album}</h1>
+          <h3>{artist}</h3>
         </div>
-        {/* <Carousel
+        <Carousel
           autoPlay
           interval={6000}
           infiniteLoop
           centerMode
         >
           {
-            results.filter((albums) => (albums.album.length === 13)).slice(0, 10).map(slide => (
+            results.filter(album => album.length === 10);
+}
+
+          console.log(results);
+            
+
+
+          {/*}.slice(0, 9)
+            .map(slide => (
               <div key={slide.album}>
-                <img className="imgslide" src={slide.image[0]["#text"]} />
-                <div className="overlay">
-                  <a href={`/ProductId/${slide.album}`}> <h2 className="overlay__title">{slide.name}</h2>
-                  </a>
-                </div>
-              </div>
-            ))}
-        </Carousel> */}
+            <img className="imgslide" src={slide.album.image[0]["#text"]} alt="" />
+            <div className="overlay">
+              <a href={`/Albums/${slide.album}`}> <h2 className="overlay__title">{slide.name}</h2>
+              </a>
+            </div>
+          </div>
+            ))*/}
+        </Carousel>
       </section>
     </main>
   )
 }
 
 export default ResultsAlbums;
+
+/*<div>
+                 <img alt="" src={album} />
+                 <p className="legend">Legend 1</p>
+               </div>
+               <div>
+                 <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
+                 <p className="legend">Legend 2</p>
+               </div>
+               <div>
+                 <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
+                 <p className="legend">Legend 2</p>
+               </div>
+               <div>
+                 <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
+                 <p className="legend">Legend 2</p>
+               </div>*/
