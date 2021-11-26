@@ -39,7 +39,6 @@ const ResultsAlbums = ({ artist, album }) => {
         </Helmet>
 
         <div className="albumName">
-          <h1>{album}</h1>
           <h3>{artist}</h3>
         </div>
         <Carousel
@@ -50,15 +49,12 @@ const ResultsAlbums = ({ artist, album }) => {
         >
         
           {
-          filteredResults.map((slide) => {
+          filteredResults.slice(0, 9).map((slide) => {
           
           return (
             <div key={slide.name}>
               <img className="imgslide" src={slide.image[3]["#text"]} alt={`Couverture de l'album ${slide.name}`} />
-              <div className="overlay">
-                <a href={`/Albums/${slide.album}`}> <h2 className="overlay__title">{slide.name}</h2>
-                </a>
-              </div>
+              
             </div>
             )})
           }
