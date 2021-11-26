@@ -8,12 +8,6 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
 
   const [chosenAlbum, setChosenAlbum] = useState();
 
-  console.log("L'artiste en cours est :")
-  console.log(artist);
-  console.log("L'album en cours est :")
-  console.log(album);
-
-
   useEffect(() => {
     const getData = () => {
       axios
@@ -24,8 +18,8 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
         album && artist ? getData() : console.log(`albumName et artistName ne sont pas définis`);
     }, [album, artist]);
 
-    console.log("chosen album");
-    console.log(chosenAlbum);
+    console.log("The chosen album is : *******")
+    console.log(chosenAlbum)
 
     return (
       <div>

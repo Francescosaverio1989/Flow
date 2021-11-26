@@ -19,9 +19,6 @@ const AlbumPage = () => {
         setChosenSingle(e.target.value);
     }
 
-    console.log("chosen single is:")
-    console.log(chosenSingle)
-
     return (
         <div>
             <ResultsAlbums artist={artist} album={album}/>
