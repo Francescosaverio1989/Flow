@@ -1,0 +1,18 @@
+.vote-button{
+    display: flex;
+    align-items: center;
+}
+
+.vote-button button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #E43397;
+    color: white;
+}
+
+.vote-button .vote-result {
+    color: #00C4CC;
+    font-size: 0.8rem;;
+}
