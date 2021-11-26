@@ -33,21 +33,27 @@ export const Album = ({artist, album, setChosenSingle, handleSingleChoice}) => {
         { chosenAlbum &&
           <>
             <div className="header-album-container">
-                           
-              <img src={chosenAlbum.image[3]["#text"]} alt={chosenAlbum.image['#text']} />
+
+              <div className="header-album-img-container">            
+                <img className="header-album-img" src={chosenAlbum.image[4]["#text"]} alt={chosenAlbum.image['#text']} />
+              </div> 
 
               <div className="header-album-col2">
                 <h2 className ="header-album-album">{chosenAlbum.name}</h2>
                 <h3 className ="header-album-artist">{chosenAlbum.artist}</h3>
                 {/* <p>wiki : {album.wiki.key=(content)}</p> */}
+                {/* <p className ="header-album-wiki">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p className ="header-album-wiki">Adipisci est quis amet incidunt laborum dignissimos odio molestiae autem, dolorum architecto repellendus cum modi sit excepturi ipsam dolor facere numquam deserunt.</p> */}
                 {/* released */}
+                <p className ="header-album-Released">Released : 202-01-10</p>
+
               </div>  
             </div>  
 
             <div className="single-tracks">
               {chosenAlbum.tracks.track.map((song, index) => {
                 return(
-                  <div key={index} className="single-track-countainer">
+                  <div key={index} className="single-track-container">
                     <div className="trackNumber">{index}</div>
                      <button 
                      type="button" 

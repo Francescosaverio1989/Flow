@@ -4,6 +4,13 @@
     display: flex;
     justify-content:space-evenly;
     padding: 12px;
+    margin: 7rem 1rem;
+}
+
+.header-album-img{
+    max-width: 100%;
+    max-height: auto;
+
 }
 
 .header-album-col2{
@@ -15,13 +22,29 @@
 
 .header-album-album{
     color: #4C0BD1;
+    padding: 12px;
 }
 
 .header-album-artist{
     color: #00C4CC;
+    padding: 12px;
 }
 
-.single-track-countainer{
+.header-album-wiki{
+    max-width: 60%;
+    color: #121640;
+    padding: 12px;
+}
+
+.header-album-Released{
+    color: #CB88FF;
+    padding: 12px;
+
+}
+
+
+
+.single-track-container{
     display: flex;
     align-items: center;
 }
