@@ -6,15 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Helmet } from 'react-helmet';
 
 
-const ResultsAlbums = () => {
-
-  const params = useParams();
-
-  console.log("L'artiste en cours est :")
-  console.log(params.artiste);
-  console.log("L'album en cours est :")
-  console.log(params.album);
-
+const ResultsAlbums = ({artist, album}) => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -23,7 +15,7 @@ const ResultsAlbums = () => {
 
   const getAlbums = () => {
     axios
-      .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&artist=${params.artist}&album=${params.album}&format=json`)
+      .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f8f8f5d046ed8eb2174ac55fadb58ae&artist=${artist}&album=${album}&format=json`)
       .then(response => setResults(response.data.album))
   }
 
@@ -38,9 +30,9 @@ const ResultsAlbums = () => {
         </Helmet>
 
         <div className="albumName">
-          <h1>{params.album}</h1>
+          <h1>{album}</h1>
         </div>
-        <Carousel
+        {/* <Carousel
           autoPlay
           interval={6000}
           infiniteLoop
@@ -56,7 +48,7 @@ const ResultsAlbums = () => {
                 </div>
               </div>
             ))}
-        </Carousel>
+        </Carousel> */}
       </section>
     </main>
   )

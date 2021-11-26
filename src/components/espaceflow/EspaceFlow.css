@@ -10,7 +10,8 @@
 
 .espace-flow h2 {
     color: #fffdff;
-    margin-bottom: 4rem;;
+    margin-bottom: 3rem;
+    font-size: 2rem;
 }
 
 .espace-flow p {
@@ -19,5 +20,11 @@
     color: #4C0BD1;
     font-size: 0.9rem;
 }
+
+.espace-flow-post-countainer {
+    display: flex;
+}
+
+
 
 

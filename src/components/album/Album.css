@@ -1,0 +1,16 @@
+/* Album.css */
+
+.albumsection-container{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 12px;
+
+}
+
+.albumsection-col2{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+
+}
