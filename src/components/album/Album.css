@@ -50,3 +50,8 @@
     border: none;
     color: #FFFDFF;
 }
+
+.single-title-button:hover{
+    cursor: pointer;
+    color: #00C4CC;
+}
