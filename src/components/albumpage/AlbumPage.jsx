@@ -14,6 +14,7 @@ const AlbumPage = () => {
     const album = params.album;
 
     const [chosenSingle, setChosenSingle] = useState('');
+    const [chosenArtist, setChosenArtist] = useState('');
 
     const handleSingleChoice = (e) => {
         setChosenSingle(e.target.value);
@@ -25,8 +26,8 @@ const AlbumPage = () => {
     return (
         <div>
             <ResultsAlbums artist={artist} album={album}/>
-            <Album artist={artist} album={album} setChosenSingle={setChosenSingle} handleSingleChoice={handleSingleChoice}/>
-            <Lyrics chosenSingle={chosenSingle}/>
+            <Album artist={artist} album={album} setChosenSingle={setChosenSingle} setChosenArtist={setChosenArtist} handleSingleChoice={handleSingleChoice}/>
+            <Lyrics chosenSingle={chosenSingle} chosenArtist={chosenArtist}/>
             <EspaceFlow />
             <Footer />
         </div>
