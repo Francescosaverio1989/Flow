@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SuggestionSong from "../suggestionsong/SuggestionSong";
 import "./UserStories.css";
 
 const UserStories = ({ parentId, userStories, setUserStories }) => {
@@ -44,6 +45,7 @@ const UserStories = ({ parentId, userStories, setUserStories }) => {
           Post
         </button>
       </form>
+      <SuggestionSong />
     </div>
   );
 };

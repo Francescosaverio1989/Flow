@@ -59,7 +59,7 @@ const EspaceFlow = () => {
                             userMusic.map(({musicTitle, artiste}, index) => {
                                 console.log(musicTitle)
                             
-                            return <PostedMusic key={index} musicTitle={musicTitle} artiste={artiste}/>})
+                            return <PostedMusic key={index} musicTitle={musicTitle} artiste={artiste} setUserMusic={setUserMusic}/>})
                         }
                      
                         <UserStories userStories={userStories} setUserStories={setUserStories}/>
